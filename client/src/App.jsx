@@ -10,7 +10,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/welcome" element={<HomeComponent />} />
+          <Route path="/" element={<GameRules />} />
         </Routes>
       </main>
 
