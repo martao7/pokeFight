@@ -2,6 +2,7 @@ import { useState } from "react";
 import Welcome from "./components/Welcome"
 import Game from "./components/Game"
 import Finish from "./components/Finish"
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
 
