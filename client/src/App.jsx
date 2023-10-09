@@ -1,12 +1,22 @@
 import { useState } from "react";
-import City from "./components/City";
+import Welcome from "./components/Welcome"
+import Game from "./components/Game"
+import Finish from "./components/Finish"
 
 import "./App.css";
 
 function App() {
   return (
     <>
-  <City />
+      <header></header>
+      <main>
+        <Routes>
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/finish" element={<Finish />} />
+        </Routes>
+      </main>
+      <footer></footer>
     </>
   );
 }
