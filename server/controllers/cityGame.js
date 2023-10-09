@@ -5,7 +5,7 @@ import pokemons from 'pokemonList.json';
 
 export const startGame = async(req, res) => {
     try {
-        // get cities, start session
+        // get cities, start session, getNextCity[0]
     } catch (error) {
         res.status(500).json({message: error.message});
     }
