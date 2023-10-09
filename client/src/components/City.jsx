@@ -1,4 +1,4 @@
-import axios from "axios";geoIDs
+import axios from "axios";
 import { useEffect, useState } from "react";
 import geoindex from "/public/geoindex.js";
 import getCity from "../services/httpService"
