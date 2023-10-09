@@ -1,11 +1,16 @@
 import express from 'express';
-import pool from './db/server.js';
-import Router from './routes/Router.js';
+import './db/server.js';
+import { errorHandler } from './middleware/ErrorHandler.js';
 
 const app = express();
-const port = 8000;
+const PORT = process.env.PORT||8080;
 
 app.use(express.json());
-app.use('/', Router);
 
-app.listen(port, () => console.log(`server is running on port: ${port}`));
+//main routing
+//app.use('cities', citiesRoutes)
+
+
+app.use(errorHandler);
+
+app.listen(PORT, ()=> console.log(`Server is listening on PORT ${PORT}`));
