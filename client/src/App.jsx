@@ -1,20 +1,12 @@
 import { useState } from "react";
+import City from "./components/City";
 
 import "./App.css";
 
 function App() {
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
-      <main>
-        <Routes>
-          <Route path="/welcome" element={<HomeComponent />} />
-        </Routes>
-      </main>
-
-      <Footer />
+  <City />
     </>
   );
 }
