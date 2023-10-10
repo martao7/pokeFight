@@ -1,5 +1,5 @@
-import City from "./components/City";
-import Map from "./components/Map";
+import City from "./City";
+import Map from "./Map";
 
 function Game() {
     return (
