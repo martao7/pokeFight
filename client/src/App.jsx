@@ -3,7 +3,6 @@ import Welcome from "./components/Welcome";
 import Game from "./components/Game";
 import Finish from "./components/Finish";
 import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
-
 import "./App.css";
 
 function App() {
