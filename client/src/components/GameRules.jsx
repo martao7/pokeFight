@@ -1,18 +1,18 @@
 import React from "react";
+import Modal from "react-modal";
 
-export default function GameRules() {
+Modal.setAppElement("#root"); // Wählen Sie die Wurzel-Element-ID Ihrer Anwendung
+
+export default function GameRules({ isOpen, onClose, text }) {
   return (
     <>
-      <div>
-        <p>
-          In this game you should guess the names of the cities they are
-          presented on the next pages on the photos. Click into input window and
-          put there your guess of the name of presented city. When you are
-          ready, click on the right arrow to go to the next page. At the end,
-          you will see your total score and the comparison your score with the
-          best results of other players. Good luck and have fun!
-        </p>
-      </div>
+      <Modal isOpen={isOpen} onRequestClose={onClose}>
+        <div>
+          <h2>Game Rules</h2>
+          <p>{text}</p>
+          <button onClick={onClose}>Close</button>
+        </div>
+      </Modal>
     </>
   );
 }
