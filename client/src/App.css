@@ -2,6 +2,21 @@
   background-image: url("https://pixabay.com/get/g45df5d9d733b7802cd448d27cd627dd3e35a3991106a5b25ab0657c6fb127ac0281c8dc6bd901242eea13e42f271f73fc93b186e2d1050c095118cf64e1a3565_1920.jpg");
 } */
 
+
+/* ////// header */
+
+.nav {
+  text-align: center;
+  border: 2px solid #4968ad;
+  background-color: #4968ad;
+  color: #e5e9ec;
+  border-radius: 0.5rem;
+}
+
+/* ////// end of header */
+
+
+
 .welcome {
   text-align: center;
   font-family: monospace;
@@ -9,8 +24,48 @@
 
 #gameRulesButton {
   border: 2px solid rgb(126, 126, 46);
+  margin: 40px;
 }
 
 #playButton {
   border: 1px solid rgb(34, 34, 30);
 }
+
+
+
+/* ///social media icons - footer */
+.footer {
+  text-align: center;
+}
+.social-container {
+  background: #eee;
+  padding: 25px 50px;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
+/* ///end of social media icons - footer */
