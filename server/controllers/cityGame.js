@@ -2,6 +2,8 @@ import express from "express.js";
 import axios from "axios";
 import pokemons from "pokemonList.json";
 
+const ROUND_LENGTH = 5;
+
 export const startGame = async (req, res) => {
   try {
     req.session.geoIDs = randomCities();
@@ -14,12 +16,12 @@ export const startGame = async (req, res) => {
 
 export const getNextCity = async (req, res) => {
   try {
-    if (req.session.index === 6) {
+    if (req.session.index === ROUND_LENGTH-1) {
       req.session.destroy();
       res.clearCookie("connect.sid");
       //to do: return results 
       res.send("go to finish page");
-    } else if (req.session.index < 6) {
+    } else if (req.session.index < ROUND_LENGTH-1) {
       req.session.index = req.session.index + 1;
       res.send(getCity(req.session.geoIDs[req.session.index]));
     }
@@ -36,7 +38,7 @@ export const getNextCity = async (req, res) => {
 // helper functions
 
 const randomCities = () => {
-  const roundLength = 5;
+  const roundLength = ROUND_LENGTH;
   const round = [];
   for (let i = 0; i < roundLength; i++) {
     const randomIndex = Math.floor(Math.random() * 1000);
