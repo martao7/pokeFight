@@ -2,7 +2,7 @@ import axios from "axios";
 import backend_url from "../../env";
 
 const httpService = {
-  getCity : async (geoIDs) => {
+  getCity : async () => {
     const response = await axios.get(
       `${backend_url}/getNextCity`
     );

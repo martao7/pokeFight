@@ -2,9 +2,11 @@ import React from "react";
 import GameRules from "./GameRules";
 import { useState } from "react";
 import CreateSpieler from "./CreateSpieler";
+import { useNavigate } from "react-router-dom";
 
 export default function Welcome() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openPopup = () => {
     setIsPopupOpen(true);
