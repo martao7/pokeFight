@@ -18,10 +18,11 @@ export default function Welcome() {
     <>
       <div className="welcome">
         <div className="picture1">
-          <img
+          <img src="./img/globe1.png" width="50%" />
+          {/* <img
             src="https://pixabay.com/get/g72147e841bf49cd41fc9ce864248acedeeb293501995f9cfc9c12aebbf29d4f10af6828286b28b2fa327d64ceeb8b8e7826adf367760964a8a3a05c6f9043e48_1280.png"
             width="50%"
-          />
+          /> */}
           <div className=""></div>
         </div>
 
@@ -33,7 +34,9 @@ export default function Welcome() {
 
             <div className="playButton">
               <p>...and press:</p>
-              <button onClick>PLAY</button>
+              <button onClick id="playButton">
+                PLAY
+              </button>
             </div>
           </form>
         </div>
