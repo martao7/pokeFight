@@ -28,17 +28,16 @@ export default function Welcome() {
 
         <div className="usersName">
           <p>Put your name here:</p>
-          {/* <CreateSpieler /> */}
-          <form onSubmit={""}>
+          <CreateSpieler />
+          {/* <form onSubmit={""}>
             <input id="name" type="text" placeholder="name" value="" />
-
-            <div className="playButton">
-              <p>...and press:</p>
-              <button onClick id="playButton">
-                PLAY
-              </button>
-            </div>
-          </form>
+            </form> */}
+          <div className="playButton">
+            <p>...and press:</p>
+            <button onClick id="playButton">
+              PLAY
+            </button>
+          </div>
         </div>
 
         <div classname="gameRulesExpl">
