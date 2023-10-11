@@ -1,21 +1,26 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import geoindex from "/public/geoindex.js";
-import getCity from "../services/httpService"
+import getCity from "../services/httpService";
+import httpService from "../services/httpService";
 
 const City = () => {
 
-  //getting a single city from the API
   const [city, setCity] = useState();
-
   
   useEffect(() => {
-    setCity(getCity(geoIDs));
+    setCity(httpService.startGame());
   }, []);
+
+  const next = async function () {
+    setCity(httpService.getCity());
+  }
+
 
   return (
     <>
       <h1 className="category-title">City Name</h1>
+      <button onClick={next}>next</button>
       <div></div>
     </>
   );
