@@ -4,6 +4,8 @@ import Game from "./components/Game";
 import Finish from "./components/Finish";
 import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   const navigate = useNavigate();
@@ -12,7 +14,9 @@ function App() {
 
   return (
     <>
-      <header>header</header>
+      {/* <header>header</header> */}
+      <Header />
+
       <main>
         <Routes>
           <Route path="/welcome" element={<Welcome />} />
@@ -21,7 +25,9 @@ function App() {
           <Route path="*" element={<Navigate to="/welcome" replace />} />
         </Routes>
       </main>
-      <footer>footer</footer>
+
+      {/* <footer>footer</footer> */}
+      <Footer />
     </>
   );
 }
